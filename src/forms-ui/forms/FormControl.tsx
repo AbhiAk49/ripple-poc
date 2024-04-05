@@ -101,7 +101,7 @@ export default class FormControl extends BaseFormControl {
         );
     }
 
-    input(type: string, htmlProps?: any, textFieldProps?: TextFieldProps) {
+    input(type: string, htmlProps?: any) {
         return (
             <InputControl
                 className={this.getWrapperClassName()}
@@ -117,7 +117,6 @@ export default class FormControl extends BaseFormControl {
                 handleValidation={this.handleValidation}
                 setError={this.setError}
                 htmlProps={htmlProps}
-                textFieldProps={textFieldProps}
             />
         );
     }
