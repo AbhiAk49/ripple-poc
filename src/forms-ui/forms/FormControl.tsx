@@ -345,12 +345,12 @@ export default class FormControl extends BaseFormControl {
                 autoComplete
             };
         }
-        const textFieldProps: TextFieldProps = {
-            InputProps: {
-                inputComponent: InputComponent
-            }
-        };
-        return this.input("number", htmlProps, textFieldProps);
+        // const textFieldProps: TextFieldProps = {
+        //     InputProps: {
+        //         inputComponent: InputComponent
+        //     }
+        // };
+        return this.input("number", htmlProps);
     }
 
     templateControl(): JSX.Element {
@@ -377,12 +377,12 @@ export default class FormControl extends BaseFormControl {
 
     multitext(): JSX.Element {
         const config = this.props.form.config as Record<string, number | undefined>;
-        const textFieldProps: TextFieldProps = {
-            multiline: true,
-            minRows: config?.minRows ?? 4,
-            maxRows: config?.maxRows ?? 4
-        };
-        return this.input("text", {}, textFieldProps);
+        // const textFieldProps: TextFieldProps = {
+        //     multiline: true,
+        //     minRows: config?.minRows ?? 4,
+        //     maxRows: config?.maxRows ?? 4
+        // };
+        return this.input("text", {});
     }
 
     showValidation(infoMsg?: string) {
