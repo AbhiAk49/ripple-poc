@@ -2,8 +2,6 @@
   "name": "ripple",
   "version": "0.0.1",
   "description": "Material UI form using Json Schema",
-  "author": "ahmedsakri",
-  "email": "ahmedsakri@gofynd.com",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.ts",

@@ -26,9 +26,7 @@ function InputControl(props: InputControlProps) {
                 name={props.name}
                 disabled={props.form.isDisabled}
                 placeholder={props.form?.placeholder}
-                value={
-                    typeof props.form?.value === "boolean" ? (props.form?.value ? "1" : "0") : props.form?.value || ""
-                }
+                value={typeof props.form?.value === "boolean" ? (props.form?.value ? 1 : 0) : props.form?.value || ""}
                 onChange={props.handleChange}
                 onBlur={props.handleValidation}
             />
