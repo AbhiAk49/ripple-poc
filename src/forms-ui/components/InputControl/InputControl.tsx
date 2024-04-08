@@ -29,6 +29,7 @@ function InputControl(props: InputControlProps) {
                 value={typeof props.form?.value === "boolean" ? (props.form?.value ? 1 : 0) : props.form?.value || ""}
                 onChange={props.handleChange}
                 onBlur={props.handleValidation}
+                {...htmlProps}
             />
             {props.error?.hasError && <span>{props.error.errorMsg || infoText}</span>}
         </div>
