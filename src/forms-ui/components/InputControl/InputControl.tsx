@@ -11,7 +11,7 @@ function InputControl(props: InputControlProps) {
     let infoText: string = props.form?.validation?.infoDetail?.infoMsg ?? "";
     const wrapperClassName = "meta-form-control-" + props.className;
     console.log("--props--", props);
-    const htmlProps = props.htmlProps ?? {};
+    const htmlProps = props.form.htmlProps ?? props.htmlProps ?? {};
     const isInfoFnExists = infoText?.includes("$");
     if (isInfoFnExists) {
         const infoMsgFnName: string = props.form?.validation?.infoDetail?.infoMsgFn ?? "";
